@@ -15,7 +15,9 @@ fn main() {
         println!("Enter a word:");
         io::stdin().read_line(&mut word_input).unwrap();
         // delete crlf
-        word_input = word_input.trim().to_string();
+        // word_input = word_input.trim().to_string();
+        word_input.pop();
+        word_input.pop();
         if word_input.len() == 0 {
             break;
         }
